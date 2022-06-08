@@ -20,5 +20,9 @@ Route::get('/', function () {
 
 
 Route::get('/about-me', function(){
-    return view('about-me');
+    $name = 'Fabio Pacifici';
+    $job = 'Teacher';
+    $posts = ['Learn PHP', 'Learn Laravel', 'Learn Js', 'Learn Vuejs'];
+
+    return view('about-me', compact('name', 'job', 'posts'));
 });

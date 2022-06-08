@@ -63,6 +63,7 @@
         .m-b-md {
             margin-bottom: 30px;
         }
+
         .text-center {
             text-align: center;
         }
@@ -71,7 +72,14 @@
 
 <body>
 
-        <h1 class="text-center">About Me</h1>
+    <h4 class="text-center">{{$job}}</h4>
+    <h1 class="text-center">About Me {{ $name }}</h1>
+
+    <ul>
+        @foreach($posts as $post )
+        <li>{{$post}}</li>
+        @endforeach
+    </ul>
 </body>
 
 </html>
